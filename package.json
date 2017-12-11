@@ -1,0 +1,29 @@
+{
+  "name": "edgeredirector-ui",
+  "version": "0.0.5",
+  "description": "Edge Redirector Proxy UI Application",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "build-serve": "gulp build-serve"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "connect-history-api-fallback": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-install": "^0.6.0",
+    "gulp-main-bower-files": "^1.5.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "main-bower-files": "^2.13.1",
+    "require-dir": "^0.3.0"
+  },
+  "devDependencies": {
+    "susy": "^2.2.12"
+  }
+}

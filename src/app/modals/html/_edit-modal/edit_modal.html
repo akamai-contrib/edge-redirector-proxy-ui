@@ -1,0 +1,22 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div ng-submit="submit()">
+  <div class="edgeredirector-modal-header">
+    <i class="si si-pencil"></i>
+    <span>Edit Rule</span>
+    <button class="float-right close" ng-click="cancel()">
+      <i class="si si-close"></i>
+    </button>
+  </div>
+  <div class="edgeredirector-modal-body">
+    <ng-include src="'app/modals/html/_edit-modal/_edit-body-form.html'" ng-if="!confirmationModal"></ng-include>
+    <ng-include src="'app/modals/html/_edit-modal/_edit-body-confirmation.html'" ng-if="confirmationModal"></ng-include>
+  </div>
+  <div class="edgeredirector-modal-footer">
+    <button type="button" class="btn btn-default btn-edgeredirector" ng-click="cancel()">{{ exitButton }}</button>
+    <button type="button" class="btn cyan float-right" ng-disabled="!form.newSource || !form.newDestination" ng-click="submit()">{{ confirmButton }}</button>
+  </div>
+</div>

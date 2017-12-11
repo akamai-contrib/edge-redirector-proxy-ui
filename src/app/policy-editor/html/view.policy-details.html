@@ -1,0 +1,43 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div class="block">
+
+  <div class="block-header">
+    <div class="row">
+      <div class="col-sm-5">
+        <h4>Policy: {{ manage.edgeredirectorData.policyId }}, Version: {{ manage.edgeredirectorData.version }}</h4>
+      </div>
+      <div class="col-sm-7 align-right">
+        <!-- TODO: Pagination  -->
+        <h4 class="pagination-controls">Policy Details</h4>
+      </div>
+    </div>
+    <!-- TODO: Refresh button to retrieve latest data, display last time data retrieved. -->
+  </div>
+
+  <div style="margin-left: 15px">
+    <!-- <p>{{ manage.edgeredirectorData.activations }}</p> -->
+    <p>
+      <strong>Created: </strong>{{ manage.edgeredirectorData.createDate }}</p>
+    <p>
+      <strong>Created By: </strong>{{ manage.edgeredirectorData.createdBy }}</p>
+    <p>
+      <strong>Description: </strong>{{ manage.edgeredirectorData.description }}</p>
+    <p>
+      <strong>Last Modified By: </strong>{{ manage.edgeredirectorData.lastModifiedBy }}</p>
+    <p>
+      <strong>Last Modified Date: </strong>{{ manage.edgeredirectorData.lastModifiedDate }}</p>
+    <p>
+      <strong>Location: </strong>{{ manage.edgeredirectorData.location }}</p>
+    <p>
+      <strong>Match Rule Format: </strong>{{ manage.edgeredirectorData.matchRuleFormat }}</p>
+    <p>
+      <strong>Revision Id: </strong>{{ manage.edgeredirectorData.revisionId }}</p>
+    <p>
+      <strong>Rules Locked: </strong>{{ manage.edgeredirectorData.rulesLocked }}</p>
+  </div>
+  <hr>
+</div>

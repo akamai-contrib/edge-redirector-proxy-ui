@@ -1,0 +1,15 @@
+{
+  "name": "edgeredirector",
+  "description": "edgeredirector ui",
+  "main": "gulpfile.js",
+  "authors": [""],
+  "license": "MIT",
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+    "normalize-scss": "normalize.scss#^6.0.0",
+    "angular": "1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-toArrayFilter": "^1.0.1",
+    "angularUtils-pagination": "angular-utils-pagination#^0.11.1"
+  }
+}

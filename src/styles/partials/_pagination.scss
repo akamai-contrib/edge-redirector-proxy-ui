@@ -1,0 +1,21 @@
+.edgeredirector-pagination {
+  color: $table-text-primary;
+  text-align: right;
+  margin: 10px 0;
+  a {
+    position: relative;
+    top: 1px;
+    color: $cyan;
+    &:hover,
+    &:focus {
+      color: $cyan;
+      text-decoration: none;
+    }
+  }
+  li {
+    display: inline-block;
+  }
+  .disabled {
+    display: none;
+  }
+}

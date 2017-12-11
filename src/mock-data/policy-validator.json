@@ -1,0 +1,3804 @@
+[
+  {
+    "source": "https://www.mydomain.com^(.*/credit-cards/)(.+)(/disclosures/)",
+    "destination": "https://www.mydomain.com\\1\\2/#disclosures",
+    "statusCode": 400,
+    "finalDestination":
+      "https://www.mydomain.com/%5E(.*/credit-cards/)(.+)(/disclosures/)",
+    "redirectsFollowed": 0,
+    "redirects": [],
+    "validation": false,
+    "message": "No redirect occurred. Final destination page error."
+  },
+  {
+    "source":
+      "https://www.mydomain.com^(.*/credit-cards/)(.+)(/disclosures/)([\\?].*)$",
+    "destination": "https://www.mydomain.com\\1\\2/\\4#disclosures",
+    "statusCode": 400,
+    "finalDestination":
+      "https://www.mydomain.com/%5E(.*/credit-cards/)(.+)(/disclosures/)([/?].*)$",
+    "redirectsFollowed": 0,
+    "redirects": [],
+    "validation": false,
+    "message": "No redirect occurred. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/carstatus/",
+    "destination": "https://autorefi.mydomain.com/login",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/login",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/login"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-refinancing/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/moneycoaching/boston/",
+    "destination":
+      "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336",
+    "statusCode": 200,
+    "finalDestination":
+      "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/moneycoaching/",
+    "destination":
+      "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336",
+    "statusCode": 200,
+    "finalDestination":
+      "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/moneycoaching/austin/",
+    "destination":
+      "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37160/48690",
+    "statusCode": 200,
+    "finalDestination":
+      "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37160/48690",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37160/48690"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autostatement1/",
+    "destination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1002&external_id=COAF_AN_ISL_EXT",
+    "statusCode": 200,
+    "finalDestination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1002&external_id=COAF_AN_ISL_EXT",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1002&external_id=COAF_AN_ISL_EXT"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/automail/",
+    "destination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1001&external_id=COAF_AN_DM_FDM",
+    "statusCode": 200,
+    "finalDestination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1001&external_id=COAF_AN_DM_FDM",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1001&external_id=COAF_AN_DM_FDM"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autocafe/",
+    "destination":
+      "https://ane.mydomain.com/landing?PFFSRCID=SR1BLC%2A%2A%2AAUT%2A%2A%2A%2ABU0001%2A%2A%2A&external_id=COAF_AN_BNK_BNK",
+    "statusCode": 200,
+    "finalDestination":
+      "https://ane.mydomain.com/landing?PFFSRCID=SR1BLC%2A%2A%2AAUT%2A%2A%2A%2ABU0001%2A%2A%2A&external_id=COAF_AN_BNK_BNK",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://ane.mydomain.com/landing?PFFSRCID=SR1BLC%2A%2A%2AAUT%2A%2A%2A%2ABU0001%2A%2A%2A&external_id=COAF_AN_BNK_BNK"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/automail1/",
+    "destination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1002&external_id=COAF_AN_DM_FDM",
+    "statusCode": 200,
+    "finalDestination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1002&external_id=COAF_AN_DM_FDM",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1002&external_id=COAF_AN_DM_FDM"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/auto-refinancing/disclosures/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-refinancing/faq/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/auto-refinancing/details/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autorefi/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autostatement/",
+    "destination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1001&external_id=COAF_AN_ISL_EXT",
+    "statusCode": 200,
+    "finalDestination":
+      "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1001&external_id=COAF_AN_ISL_EXT",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1001&external_id=COAF_AN_ISL_EXT"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/secureupload/",
+    "destination":
+      "https://secureupload.mydomain.com/auto-finance/secureupload",
+    "statusCode": 200,
+    "finalDestination":
+      "https://secureupload.mydomain.com/auto-finance/secureupload",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://secureupload.mydomain.com/auto-finance/secureupload"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/lp/refi-011/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/assets/enterprise/js/c1TechVars.js",
+    "destination":
+      "https://www.mydomain.com/assets/enterprise/deviceType/c1SiteVars.js",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/assets/enterprise/deviceType/c1SiteVars.js",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/assets/enterprise/deviceType/c1SiteVars.js"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/bankinghelp/",
+    "destination": "https://helpcenter.mydomain-alt.com/",
+    "statusCode": 200,
+    "finalDestination": "https://helpcenter.mydomain-alt.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://helpcenter.mydomain-alt.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/lp/auto-financing-pict/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/carstatus",
+    "destination": "https://autorefi.mydomain.com/login",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/login",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/carstatus/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/login"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-refinancing",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/auto-refinancing/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/auto-refinancing/before-applying/",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/chooseit/",
+    "destination":
+      "https://servicing.mydomain.com/c1/Login.aspx?redirect=PURCHASELEVELFINANCING",
+    "statusCode": 200,
+    "finalDestination":
+      "https://verified.mydomain.com/sic-ui/#/esignin?Product=Card&Action=PURCHASELEVELFINANCING",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://servicing.mydomain.com/c1/Login.aspx?redirect=PURCHASELEVELFINANCING"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://verified.mydomain.com/sic-ui/#/esignin?Product=Card&Action=PURCHASELEVELFINANCING"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/rewardsupgrade/",
+    "destination":
+      "https://servicing.mydomain.com/c1/login.aspx?redirect=MODIFYYOURFEATURES",
+    "statusCode": 200,
+    "finalDestination":
+      "https://verified.mydomain.com/sic-ui/#/esignin?Product=Card&Action=MODIFYYOURFEATURES",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://servicing.mydomain.com/c1/login.aspx?redirect=MODIFYYOURFEATURES"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://verified.mydomain.com/sic-ui/#/esignin?Product=Card&Action=MODIFYYOURFEATURES"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autorefi",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/autorefi/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/auto-refinancing/details",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/auto-refinancing/details/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-refinancing/faq",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/auto-refinancing/faq/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/auto-refinancing/disclosures",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/auto-refinancing/disclosures/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/dealernavigator/",
+    "destination": "https://lo-web-fe.mydomain.com/DealerPortal/#/u/login",
+    "statusCode": 200,
+    "finalDestination": "https://dealernavigator.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://lo-web-fe.mydomain.com/DealerPortal/#/u/login"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://dealernavigator.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/dealerportal/",
+    "destination": "https://lo-web-fe.mydomain.com/DealerPortal",
+    "statusCode": 200,
+    "finalDestination": "https://dealernavigator.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://lo-web-fe.mydomain.com/DealerPortal"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://dealernavigator.mydomain.com"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/direct/contact-me/",
+    "destination": "https://mortgages.mydomain.com/direct/contact-me",
+    "statusCode": 200,
+    "finalDestination":
+      "https://mortgages.mydomain.com/home-loans/mlp/mortgage-consultation",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://mortgages.mydomain.com/direct/contact-me"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://mortgages.mydomain.com/home-loans/mlp/mortgage-consultation"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/direct/mortgage-prequalifications/",
+    "destination":
+      "https://mortgages.mydomain.com/direct/mortgage-prequalifications",
+    "statusCode": 200,
+    "finalDestination":
+      "https://mortgages.mydomain.com/home-loans/prequal/landingpage",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://mortgages.mydomain.com/direct/mortgage-prequalifications"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://mortgages.mydomain.com/home-loans/prequal/landingpage"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/plasma/",
+    "destination": "https://plasma.mydomain.com",
+    "statusCode": 200,
+    "finalDestination": "https://plasma.mydomain.com/Plasma/login/login.htm",
+    "redirectsFollowed": 7,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://plasma.mydomain.com"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "http://plasma.mydomain.com/Plasma"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://plasma.mydomain.com/Plasma"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "http://plasma.mydomain.com/Plasma/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://plasma.mydomain.com/Plasma/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://plasma.mydomain.com:80/Plasma/login/login.htm"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://plasma.mydomain.com/Plasma/login/login.htm"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-loans/disclosures/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/lp/refi-011",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/lp/refi-011/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/help-center/auto-buying-guide/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/thebigpayoff/",
+    "destination": "https://www.mydomainbigpayoff.com/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomainbigpayoff.com/html/error.html?aspxerrorpath=/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomainbigpayoff.com/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomainbigpayoff.com/html/error.html?aspxerrorpath=/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/home-loans/",
+    "destination": "https://www.mydomain.com/home-loans/mortgage",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/home-loans/mortgage",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-loans/mortgage"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/contact/home-loans/",
+    "destination": "https://www.mydomain.com/home-loans/contact",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/home-loans/contact",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-loans/contact"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/auto-refinancing/before-applying",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/auto-refinancing/before-applying/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/lp/auto-financing-pict",
+    "destination": "https://autorefi.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://autorefi.mydomain.com/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/lp/auto-financing-pict/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://autorefi.mydomain.com/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/consolidate/",
+    "destination": "https://www.mydomain.com/home-equity/debt-consolidation",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-equity/debt-consolidation",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-equity/debt-consolidation"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/smallbusiness/",
+    "destination": "https://www.mydomain.com/credit-cards/business/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/credit-cards/business/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/credit-cards/business/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/stars/",
+    "destination": "https://www.mydomain.com/home-loans/mlp/dallas-stars",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/home-loans/mlp/dallas-stars",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-loans/mlp/dallas-stars"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/home-loans/mortgage-calculators/",
+    "destination": "https://www.mydomain.com/home-loans/mortgage/calculator",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-loans/mortgage/calculator",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-loans/mortgage/calculator"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autoenroll/",
+    "destination":
+      "https://secure.mydomain-alt.com/myaccount/banking/autoLoanEnrollmentMain?External_ID=COAF_LS_SNAIL_0001",
+    "statusCode": 0,
+    "finalDestination": "",
+    "redirectsFollowed": 0,
+    "redirects": [],
+    "validation": false,
+    "message":
+      "Source URL HTTP Request failed with error: Error: Exceeded maxRedirects. Probably stuck in a redirect loop https://secure.mydomain-alt.com/myaccount/banking/autoLoanEnrollmentMain;jsessionid=5495C27BDC56361EC7697BA4F829CDC1;jsessionid=3A0B60D87EF0E21C78F87CA20E04B8C6?execution=e1s1&stateId=enrollmentLandingPage"
+  },
+  {
+    "source": "https://www.mydomain.com/creditwise/",
+    "destination": "https://www.mydomain.com/credit-cards/benefits/creditwise/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/benefits/creditwise/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/benefits/creditwise/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/home-loans/rates/",
+    "destination": "https://www.mydomain.com/home-loans/mortgage/rates",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/home-loans/mortgage/rates",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-loans/mortgage/rates"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/homeimprovement/",
+    "destination": "https://www.mydomain.com/home-equity/home-improvement",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/home-equity/home-improvement",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-equity/home-improvement"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/home-loans/direct/calculators/refinance/",
+    "destination":
+      "https://www.mydomain.com/home-loans/direct/calculators/refinance",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-loans/refinance/calculator",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-loans/direct/calculators/refinance"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-loans/refinance/calculator"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/300strong/",
+    "destination":
+      "https://www.mydomain.com/bank/300strong/?external_id=360b_MM_DM_300Strong",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/300strong/?external_id=360b_MM_DM_300Strong",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/300strong/?external_id=360b_MM_DM_300Strong"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/homeequityloans/",
+    "destination":
+      "https://www.mydomain.com/home-equity?external_id=HE_HE_HomeEquityLoans",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-equity?external_id=HE_HE_HomeEquityLoans",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-equity?external_id=HE_HE_HomeEquityLoans"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/strong200/",
+    "destination":
+      "https://www.mydomain.com/bank/strong200/?external_id=360b_MM_DM_Strong200",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/strong200/?external_id=360b_MM_DM_Strong200",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/strong200/?external_id=360b_MM_DM_Strong200"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/smallbusiness",
+    "destination": "https://www.mydomain.com/credit-cards/business/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/credit-cards/business/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/smallbusiness/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/credit-cards/business/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/ratecalculator/",
+    "destination":
+      "https://www.mydomain.com/home-equity/calculator/rates?external_id=HE_HE_PRINT_1_Calculator",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-equity/calculator/rates?external_id=HE_HE_PRINT_1_Calculator",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-equity/calculator/rates?external_id=HE_HE_PRINT_1_Calculator"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/home-loans/direct/calculators/mortgage-payment/",
+    "destination":
+      "https://www.mydomain.com/home-loans/direct/calculators/mortgage-payment",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-loans/mortgage/calculator",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-loans/direct/calculators/mortgage-payment"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-loans/mortgage/calculator"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/onlinebanking/demos/test_drive/*",
+    "destination": "https://www.mydomain.com/online-banking/",
+    "statusCode": 404,
+    "finalDestination":
+      "https://www.mydomain.com/onlinebanking/demos/test_drive/*",
+    "redirectsFollowed": 0,
+    "redirects": [],
+    "validation": false,
+    "message": "No redirect occurred. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/alexa/thank-you/",
+    "destination": "https://www.mydomain.com/applications/alexa/thank-you/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/applications/alexa/thank-you/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/alexa/thank-you/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/savemore/",
+    "destination":
+      "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/savemore",
+    "destination":
+      "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/savemore/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/360-money-market/",
+    "destination":
+      "https://www.mydomain.com/bank/expectmore?external_id=360B_MM_SEM",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/expectmore/?external_id=360B_MM_SEM",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/expectmore?external_id=360B_MM_SEM"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/expectmore/?external_id=360B_MM_SEM"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/credit-cards/lp/balance-transfer/",
+    "destination": "https://www.mydomain.com/credit-cards/balance-transfer/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/balance-transfer/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/credit-cards/balance-transfer/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/hemortgagerefi/",
+    "destination": "https://www.mydomain.com/home-equity/refinance-mortgage",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-equity/refinance-mortgage",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-equity/refinance-mortgage"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/home-loans/direct/calculators/home-affordability/thank-you/",
+    "destination":
+      "https://www.mydomain.com/home-loans/direct/calculators/home-affordability/thank-you",
+    "statusCode": 404,
+    "finalDestination":
+      "https://www.mydomain.com/home-loans/direct/calculators/home-affordability/thank-you",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-loans/direct/calculators/home-affordability/thank-you"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/contact/home-equity/",
+    "destination": "https://www.mydomain.com/home-equity/contact",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/home-equity/contact",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/home-equity/contact"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/growstrong/",
+    "destination":
+      "https://www.mydomain.com/bank/growstrong/?external_id=360b_MM_DM_Strong",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/growstrong/?external_id=360b_MM_DM_Strong",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/growstrong/?external_id=360b_MM_DM_Strong"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/strong100/",
+    "destination":
+      "https://www.mydomain.com/bank/strong100/?external_id=360b_MM_DM_Strong100",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/strong100/?external_id=360b_MM_DM_Strong100",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/strong100/?external_id=360b_MM_DM_Strong100"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/home-loans/resources/",
+    "destination":
+      "https://www.mydomain.com/home-loans/mortgage/what-to-expect",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/home-loans/mortgage/what-to-expect",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/home-loans/mortgage/what-to-expect"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/siezethemay/",
+    "destination": "https://www.mydomain.com/seizethemay",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/seizethemay/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/seizethemay"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/seizethemay/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/alexa/terms/",
+    "destination": "https://www.mydomain.com/applications/alexa/terms/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/alexa/terms/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/alexa/terms/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/alexa/thankyou/",
+    "destination": "https://www.mydomain.com/applications/alexa/thankyou/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/alexa/thankyou/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/alexa/thankyou/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/200strong/",
+    "destination":
+      "https://www.mydomain.com/bank/200strong/?external_id=360b_MM_DM_200Strong",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/200strong/?external_id=360b_MM_DM_200Strong",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/200strong/?external_id=360b_MM_DM_200Strong"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/stronger200/",
+    "destination":
+      "https://www.mydomain.com/bank/stronger200/?external_id=360b_MM_DM_Strong200",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/stronger200/?external_id=360b_MM_DM_Strong200",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/stronger200/?external_id=360b_MM_DM_Strong200"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/expectmore/",
+    "destination":
+      "https://www.mydomain.com/bank/lp/360MoneyMarket/?external_id=360b_MM_DM_MAYEXITS",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/lp/360MoneyMarket/?external_id=360b_MM_DM_MAYEXITS",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/lp/360MoneyMarket/?external_id=360b_MM_DM_MAYEXITS"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/credit-cards/partnerships/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/partnerships/buypower-card/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/partnerships/buypower-card/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/partnerships/buypower-card/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/tip/",
+    "destination":
+      "https://www.mydomain.com/commercial/treasury-management/treasury-integration-program/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/treasury-management/treasury-integration-program/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/treasury-management/treasury-integration-program/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/",
+    "destination":
+      "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/pq/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/pq/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/pq/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/select-state/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-loans/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/contact/healthcare-finance/",
+    "destination": "https://www.mydomain.com/page-not-found/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/lp/allstate/refinancing",
+    "destination":
+      "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/pq/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/pq/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/auto-financing/lp/allstate/refinancing/pq/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/digital/*",
+    "destination": "https://www.mydomain.com/standards/digital/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/standards/digital/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/digital/*/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/digital/*/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/standards/digital/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/blankcheck/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/findsparkselect/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR2_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR2_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR2_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-loans/faq/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/used-car-loans/details/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/used-car-loans/faq/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-loans/details/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/auto-financing/used-car-loans/disclosures/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/auto-navigator/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/teamsterschipcard/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/unionpluschipcard/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/gmrewardscards/chip-card/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/partnerships/lp/chip-cards/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/features/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/error/",
+    "destination": "https://www.mydomain.com/page-not-found/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/prepaid-cards/",
+    "destination": "https://www.mydomain.com/page-not-found/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/page-not-found/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message":
+      "Redirected URL does not match with the rule destination URL. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/contact/healthcare-finance",
+    "destination": "https://www.mydomain.com/page-not-found/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/contact/healthcare-finance/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message":
+      "Redirected URL does not match with the rule destination URL. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/echo/",
+    "destination": "https://www.mydomain.com/applications/alexa/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/alexa/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/alexa/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/wallet/",
+    "destination": "https://www.mydomain.com/applications/mobile/wallet/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/wallet/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/wallet/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/alexa/",
+    "destination": "https://www.mydomain.com/applications/alexa/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/alexa/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/alexa/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/earnmore/",
+    "destination":
+      "https://www.mydomain.com/bank/getmore/?external_id=360b_mm_dm_July_Lt",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/getmore/?external_id=360b_mm_dm_July_Lt",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/getmore/?external_id=360b_mm_dm_July_Lt"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/yearofmoney/",
+    "destination": "https://www.mydomain.com/bank/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/bank/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/bank/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/auto-financing/help-center/",
+    "destination": "https://www.mydomain.com/auto-financing/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/autonavigator/",
+    "destination": "https://www.mydomain.com/auto-financing/auto-navigator/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/auto-navigator/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/car-financing/",
+    "destination": "https://www.mydomain.com/auto-financing/auto-navigator/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/auto-financing/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/auto-navigator/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/auto-financing/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/360checkingbonus/",
+    "destination":
+      "https://www.mydomain.com/bank/360checkingbonus/?external_id=360C_Bonus_DM_Aug",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/360checkingbonus/?external_id=360C_Bonus_DM_Aug"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/apple-pay/",
+    "destination": "https://www.mydomain.com/applications/mobile/apple-pay/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/applications/mobile/apple-pay/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/apple-pay/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/sept360checkingbonus/",
+    "destination":
+      "https://www.mydomain.com/bank/sept360checkingbonus/?external_id=360C_Bonus_DM_Sept",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/sept360checkingbonus/?external_id=360C_Bonus_DM_Sept"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/bettertogether/",
+    "destination":
+      "https://www.mydomain.com/bank/bettertogether/?external_id=Bundle_July",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/bettertogether/?external_id=Bundle_July"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/360savings/",
+    "destination":
+      "https://www.mydomain.com/savings-accounts/online-savings-account/?external_id=360b_SAV_DM_DualMarketing",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/savings-accounts/online-savings-account/?external_id=360b_SAV_DM_DualMarketing",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/savings-accounts/online-savings-account/?external_id=360b_SAV_DM_DualMarketing"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/bank/savings-bonus/",
+    "destination": "https://www.mydomain.com/bank/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/bank/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/bank/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/businesscredit/",
+    "destination":
+      "https://www.mydomain.com/commercial/lending/business-credit/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/lending/business-credit/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com.*\\.png\\/$",
+    "destination": "https://www.mydomain.com/page-not-found/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 4,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/*/.png/$/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/*/.png/$/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message":
+      "Redirected URL does not match with the rule destination URL. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com.*\\.ico\\/$",
+    "destination": "https://www.mydomain.com/page-not-found/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 4,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/*/.ico/$/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/*/.ico/$/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message":
+      "Redirected URL does not match with the rule destination URL. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/jingleball/",
+    "destination": "https://www.mydomain.com/credit-cards/benefits/jingleball/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/benefits/jingleball/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/quailvalley/",
+    "destination":
+      "https://www.mydomain.com/bank/lp/grand-opening/?tracking_id=default_default_bank_ntarrant",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/lp/grand-opening/?tracking_id=default_default_bank_ntarrant"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/ipad/bank/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/credit-cards/credit-builder-program/disclosures/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/credit-builder-program/#disclosures",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/credit-builder-program/#disclosures"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message": "Final destination page error."
+  },
+  {
+    "source":
+      "https://www.mydomain.com(.*)(distribution=[\\d]+&)(external_id=CJA[\\w\\d_]+K2569276)(.+)",
+    "destination": "https://www.mydomain.com\\1\\3\\4",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/page-not-found/",
+    "redirectsFollowed": 4,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "http://www.mydomain.com/(.*)(distribution=[/d]+&)(external_id=CJA[/w/d_]+K2569276)(.+)/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/(.*)(distribution=[/d]+&)(external_id=CJA[/w/d_]+K2569276)(.+)/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "https://www.mydomain.com/page-not-found"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/page-not-found/"
+      }
+    ],
+    "validation": false,
+    "message":
+      "Redirected URL does not match with the rule destination URL. Final destination page error."
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/website/bank/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/app/bank/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/checkingbonus/",
+    "destination": "https://www.mydomain.com/bank/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/bank/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/bank/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/applepay/",
+    "destination": "https://www.mydomain.com/applications/mobile/apple-pay/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/applications/mobile/apple-pay/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/apple-pay/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/quicken-instructions/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/sparkpromo/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=SMBT_TDS",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/faq/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/app/features/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/online-banking/mobile/website/features/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/commercial/lending/asset-based-financing/team/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/commercial/lending/assetbackedfinance/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/online-banking/mobile/website/credit-cards/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/transfer-funds/*",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 5,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "http://www.mydomain.com/online-banking/transfer-funds/*/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/online-banking/transfer-funds/*/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/ipad/360/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/microsoft-money/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/assetbackedfinance/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/industry-expertise/healthcare/sponsor-finance/",
+    "destination":
+      "https://www.mydomain.com/commercial/healthcare/financing-solutions/corporate-finance/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/healthcare/financing-solutions/corporate-finance/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/healthcare/financing-solutions/corporate-finance/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/online-banking/mobile/app/credit-cards/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/faq/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/android/360/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/pfm-year-end-file/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/android/bank/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/secure-messaging/",
+    "destination": "https://www.mydomain.com/sign-in/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/sign-in/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/sign-in/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/sparkpromo",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=SMBT_TDS",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/sparkpromo/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/online-banking/mobile/website/360/",
+    "destination": "https://www.mydomain.com/online-banking/mobile/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/mobile/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/online-banking/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "http://www.mydomain.com/applications/mobile/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/mobile/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/sparkpromo",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/sparkpromo/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/sparkpromo/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=promo"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/commercial/lending/asset-based-financing/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/financial-institutions/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/mynewstatement/",
+    "destination": "https://www.mydomain.com/credit-cards/lp/my-new-statement/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/lp/my-new-statement/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/lp/my-new-statement/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/uber-quicksilver/",
+    "destination": "https://www.mydomain.com/credit-cards/cash-back/uber/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/credit-cards/cash-back/uber/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/credit-cards/cash-back/uber/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/uber-free/",
+    "destination": "https://www.mydomain.com/credit-cards/cash-back/uber/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/credit-cards/cash-back/uber/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/credit-cards/cash-back/uber/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/uber/",
+    "destination": "https://www.mydomain.com/credit-cards/cash-back/uber/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/credit-cards/cash-back/uber/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/credit-cards/cash-back/uber/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/healthcaresponsorfinance/",
+    "destination":
+      "https://www.mydomain.com/industry-expertise/healthcare/sponsor-finance/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/healthcare/financing-solutions/corporate-finance/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/industry-expertise/healthcare/sponsor-finance/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/healthcare/financing-solutions/corporate-finance/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/industry-expertise/security/sponsor-finance/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/security/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/security/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/security/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/GovCon/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/government-contracting/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/government-contracting/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/government-contracting/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/securityfinance/",
+    "destination":
+      "https://www.mydomain.com/industry-expertise/security/sponsor-finance/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/security/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/industry-expertise/security/sponsor-finance/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/security/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/government-contracting/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/government-contracting/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/government-contracting/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/government-contracting/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/dealerservices/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/dealer-services/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/dealer-services/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/dealer-services/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/conferences/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/conferences",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=SMBT_TDS",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/conferences/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/credit-cards/classic-platinum/",
+    "destination": "https://www.mydomain.com/credit-cards/compare/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/credit-cards/compare/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/credit-cards/compare/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/conferences",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/conferences/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/conferences/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=SMBT_TDS",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/compare/?filter=business,excellent&external_id=conf"
+      }
+    ],
+    "validation": false,
+    "message": "Redirected URL does not match with the rule destination URL. "
+  },
+  {
+    "source": "https://www.mydomain.com/mycashselect/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash-select/?external_id=SMB_CR3_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash-select/?external_id=SMB_CR3_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/spark-cash-select/?external_id=SMB_CR3_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/360moneymarket/",
+    "destination":
+      "https://www.mydomain.com/online-money-market-account/?external_id=360b_mm_print_Q3Q4",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/online-money-market-account/?external_id=360b_mm_print_Q3Q4",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/online-money-market-account/?external_id=360b_mm_print_Q3Q4"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/checking-accounts/checking-account/",
+    "destination":
+      "https://www.mydomain.com/checking-accounts/essential-checking-account/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/checking-accounts/zip/?dest=/checking-accounts/essential-checking-account&Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALCTMNE8UU&SubLob=MTS%3A%3AKV0LVIE8Z&PageName=Essential+Checking&TargetLob=MTS%3A%3ALCTMNE8UU&TargetPageName=Retail+Checking+No-ZIP&referer=https%3A%2F%2Fwww.mydomain.com%2Fchecking-accounts%2Fessential-checking-account",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/checking-accounts/essential-checking-account/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomain.com/checking-accounts/zip/?dest=/checking-accounts/essential-checking-account&Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALCTMNE8UU&SubLob=MTS%3A%3AKV0LVIE8Z&PageName=Essential+Checking&TargetLob=MTS%3A%3ALCTMNE8UU&TargetPageName=Retail+Checking+No-ZIP&referer=https%3A%2F%2Fwww.mydomain.com%2Fchecking-accounts%2Fessential-checking-account"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/checking-accounts/checking-account/disclosures/",
+    "destination":
+      "https://www.mydomain.com/checking-accounts/essential-checking-account/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/checking-accounts/zip/?dest=/checking-accounts/essential-checking-account&Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALCTMNE8UU&SubLob=MTS%3A%3AKV0LVIE8Z&PageName=Essential+Checking&TargetLob=MTS%3A%3ALCTMNE8UU&TargetPageName=Retail+Checking+No-ZIP&referer=https%3A%2F%2Fwww.mydomain.com%2Fchecking-accounts%2Fessential-checking-account",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/checking-accounts/essential-checking-account/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomain.com/checking-accounts/zip/?dest=/checking-accounts/essential-checking-account&Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALCTMNE8UU&SubLob=MTS%3A%3AKV0LVIE8Z&PageName=Essential+Checking&TargetLob=MTS%3A%3ALCTMNE8UU&TargetPageName=Retail+Checking+No-ZIP&referer=https%3A%2F%2Fwww.mydomain.com%2Fchecking-accounts%2Fessential-checking-account"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/maritime/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/maritime/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/maritime/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/maritime/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/moneymarket/",
+    "destination":
+      "https://www.mydomain.com/online-money-market-account/?external_id=360b_MM_DM_DualMarketing",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/online-money-market-account/?external_id=360b_MM_DM_DualMarketing",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/online-money-market-account/?external_id=360b_MM_DM_DualMarketing"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/findmyspark/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR8_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR8_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR8_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/small-business-bank/savings-cds/money-market-account/rates/",
+    "destination":
+      "https://www.mydomain.com/small-business-bank/savings-cds/savings-account/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/small-business-bank/savings-cds/online-savings-account/?Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALVFX4215&PageName=Business+Advantage+Savings+Overview&TargetLob=MTS%3A%3ALVFX4215&TargetPageName=Spark+Savings+alt&referer=https%3A%2F%2Fwww.mydomain.com%2Fsmall-business-bank%2Fsavings-cds%2Fsavings-account",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/small-business-bank/savings-cds/savings-account/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomain.com/small-business-bank/savings-cds/online-savings-account/?Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALVFX4215&PageName=Business+Advantage+Savings+Overview&TargetLob=MTS%3A%3ALVFX4215&TargetPageName=Spark+Savings+alt&referer=https%3A%2F%2Fwww.mydomain.com%2Fsmall-business-bank%2Fsavings-cds%2Fsavings-account"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/corporatecard/",
+    "destination": "https://www.mydomain.com/commercial/corporate-cards/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/commercial/corporate-cards/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/commercial/corporate-cards/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/findcash/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR6_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR6_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR6_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/small-business-bank/savings-cds/money-market-account/",
+    "destination":
+      "https://www.mydomain.com/small-business-bank/savings-cds/savings-account/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/small-business-bank/savings-cds/online-savings-account/?Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALVFX4215&PageName=Business+Advantage+Savings+Overview&TargetLob=MTS%3A%3ALVFX4215&TargetPageName=Spark+Savings+alt&referer=https%3A%2F%2Fwww.mydomain.com%2Fsmall-business-bank%2Fsavings-cds%2Fsavings-account",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/small-business-bank/savings-cds/savings-account/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomain.com/small-business-bank/savings-cds/online-savings-account/?Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALVFX4215&PageName=Business+Advantage+Savings+Overview&TargetLob=MTS%3A%3ALVFX4215&TargetPageName=Spark+Savings+alt&referer=https%3A%2F%2Fwww.mydomain.com%2Fsmall-business-bank%2Fsavings-cds%2Fsavings-account"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/small-business-bank/savings-cds/money-market-account/faq/",
+    "destination":
+      "https://www.mydomain.com/small-business-bank/savings-cds/savings-account/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/small-business-bank/savings-cds/online-savings-account/?Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALVFX4215&PageName=Business+Advantage+Savings+Overview&TargetLob=MTS%3A%3ALVFX4215&TargetPageName=Spark+Savings+alt&referer=https%3A%2F%2Fwww.mydomain.com%2Fsmall-business-bank%2Fsavings-cds%2Fsavings-account",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/small-business-bank/savings-cds/savings-account/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri":
+          "https://www.mydomain.com/small-business-bank/savings-cds/online-savings-account/?Log=1&EventType=Link&ComponentType=T&LOB=MTS%3A%3ALVFX4215&PageName=Business+Advantage+Savings+Overview&TargetLob=MTS%3A%3ALVFX4215&TargetPageName=Spark+Savings+alt&referer=https%3A%2F%2Fwww.mydomain.com%2Fsmall-business-bank%2Fsavings-cds%2Fsavings-account"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/commercial/corporate-cards/coming-soon/",
+    "destination": "https://www.mydomain.com/commercial/corporate-cards/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/commercial/corporate-cards/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/commercial/corporate-cards/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/reit/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/real-estate-investment-trust/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/real-estate-investment-trust/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/real-estate-investment-trust/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/commercial/treasury-management/commercial-cards/",
+    "destination": "https://www.mydomain.com/commercial/corporate-cards/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/commercial/corporate-cards/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/commercial/corporate-cards/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/vacationownership/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/vacation-ownership/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/vacation-ownership/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/vacation-ownership/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/securedcard/faqs/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/secured-mastercard/?external_id=www_SCVU#faq-section",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/secured-mastercard/?external_id=www_SCVU#faq-section",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/secured-mastercard/?external_id=www_SCVU#faq-section"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/mysparkcash/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash/?external_id=SMB_CR7_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash/?external_id=SMB_CR7_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/spark-cash/?external_id=SMB_CR7_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/mycash/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash/?external_id=SMB_CR5_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash/?external_id=SMB_CR5_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/spark-cash/?external_id=SMB_CR5_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/getmore/",
+    "destination":
+      "https://www.mydomain.com/bank/getmore/?external_id=360b_MM_DM_Control",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/bank/getmore/?external_id=360b_MM_DM_Control",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/bank/getmore/?external_id=360b_MM_DM_Control"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/justice/",
+    "destination": "https://www.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/technologyfinance/",
+    "destination":
+      "https://www.mydomain.com/industry-expertise/technology/sponsor-finance/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/technology/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/industry-expertise/technology/sponsor-finance/"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/technology/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/commercial/chip-cards/",
+    "destination":
+      "https://www.mydomain.com/commercial/treasury-management/commercial-cards/emv/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/treasury-management/commercial-cards/emv/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/treasury-management/commercial-cards/emv/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/findaspark/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR9_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR9_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR9_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/technology/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/technology/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/technology/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/technology/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/samsungpay/",
+    "destination": "https://www.mydomain.com/applications/mobile/samsung-pay",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/applications/mobile/samsung-pay/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/applications/mobile/samsung-pay"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/applications/mobile/samsung-pay/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/industry-expertise/technology/sponsor-finance/",
+    "destination":
+      "https://www.mydomain.com/commercial/industry-expertise/technology/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/industry-expertise/technology/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/industry-expertise/technology/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/masterpass/",
+    "destination": "https://www.mydomain.com/applications/masterpass",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/applications/masterpass/",
+    "redirectsFollowed": 2,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/masterpass"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/applications/masterpass/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/sponsorfinance/",
+    "destination":
+      "https://www.mydomain.com/commercial/lending/sponsor-finance/",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/commercial/lending/sponsor-finance/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/commercial/lending/sponsor-finance/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/findcashselect/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR4_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR4_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/cash-back/?external_id=SMB_CR4_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source":
+      "https://www.mydomain.com/commercial/industry-expertise/healthcare/",
+    "destination": "https://www.mydomain.com/commercial/healthcare/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/commercial/healthcare/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/commercial/healthcare/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/healthcare/",
+    "destination": "https://www.mydomain.com/commercial/healthcare/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/commercial/healthcare/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/commercial/healthcare/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/healthcarefinance/",
+    "destination": "https://www.mydomain.com/commercial/healthcare/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/commercial/healthcare/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/commercial/healthcare/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/mysparkselect/",
+    "destination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash-select/?external_id=SMB_CR1_DTW",
+    "statusCode": 200,
+    "finalDestination":
+      "https://www.mydomain.com/credit-cards/business/spark-cash-select/?external_id=SMB_CR1_DTW",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri":
+          "https://www.mydomain.com/credit-cards/business/spark-cash-select/?external_id=SMB_CR1_DTW"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/mobileatm/",
+    "destination": "https://www.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/redirect.php",
+    "destination": "https://www.mydomain.com/redirect/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/",
+    "redirectsFollowed": 3,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/redirect/"
+      },
+      {
+        "statusCode": 302,
+        "redirectUri": "http://www.mydomain.com"
+      },
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  },
+  {
+    "source": "https://www.mydomain.com/getexcited/",
+    "destination": "https://www.mydomain.com/",
+    "statusCode": 200,
+    "finalDestination": "https://www.mydomain.com/",
+    "redirectsFollowed": 1,
+    "redirects": [
+      {
+        "statusCode": 301,
+        "redirectUri": "https://www.mydomain.com/"
+      }
+    ],
+    "validation": true,
+    "message": "Success"
+  }
+]

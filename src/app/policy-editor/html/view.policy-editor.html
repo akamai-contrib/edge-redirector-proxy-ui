@@ -1,0 +1,82 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div>
+  <div class="row view-title">
+    <div class="col-sm-5">
+      <h3>Policy Editor: {{ manage.pageTitle }}</h3>
+    </div>
+    <div class="col-sm-7 align-right">
+      <div class="search-wrapper">
+        <i class="si si-magnifier"></i>
+        <input type="text" ng-model="globalFilter" placeholder="Search redirects...">
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="block-head-container">
+      <div class="block-nav">
+        <a class="btn btn-default active nav-button-one" role="button" ng-class="{ 'active' : manage.list }" ng-click="manage.detailSwitch('list')">Redirect List</a>
+        <a class="btn btn-default nav-button-two" role="button" ng-class="{ 'active' : !manage.list }" ng-click="manage.detailSwitch('detail')">Policy Details</a>
+        <div class="float-right">
+          <pagination-options></pagination-options>
+          <button class="btn btn-default">Reorder Redirects</button>
+          <button class="btn cyan" data-edgeredirector-manage-add>Add New Redirect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <ng-include src="'app/modals/view.modal.html'"></ng-include> -->
+  <ng-include src="'app/policy-editor/html/view.policy-details.html'" ng-if="!manage.list"></ng-include>
+  <div class="block" ng-if="manage.list">
+
+    <div class="block-header">
+      <div class="row">
+        <div class="col-sm-5">
+          <h4>Policy: {{ manage.edgeredirectorData.policyId }}, Version: {{ manage.edgeredirectorData.version }}</h4>
+        </div>
+        <div class="col-sm-7 align-right">
+          <dir-pagination-controls template-url="/app/global/html/_pagination.controls.html"></dir-pagination-controls>
+        </div>
+      </div>
+      <!-- TODO: Refresh button to retrieve latest data, display last time data retrieved. -->
+    </div>
+
+    <table>
+      <thead>
+        <th style="width: 5%">#</th>
+        <th style="width: 20%">UID</th>
+        <th style="width: 25%">Source</th>
+        <th style="width: 35%">Destination</th>
+        <th style="width: 15%"></th>
+      </thead>
+      <tbody>
+        <tr dir-paginate="rule in manage.edgeredirectorData.matchRules | filter:globalFilter | itemsPerPage:paginateBy" ng-class-even="'even'">
+          <td>{{ rule.edgeredirectorIndex + 1 }}</td>
+          <td>{{ rule.akaRuleId }}</td>
+          <td>{{ rule.matches[0].matchValue }}</td>
+          <td>{{ rule.redirectURL }}</td>
+          <td class="align-right">
+            <button>
+              <i class="si si-note" data-edgeredirector-manage-promote></i>
+            </button>
+            <button>
+              <i class="si si-pencil" data-edgeredirector-manage-edit></i>
+            </button>
+            <button>
+              <i class="si si-trash" data-edgeredirector-manage-delete></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+  </div>
+</div>
+
+
+<ng-include src="'/app/modals/html/view.policy-editor-modals.html'"></ng-include>

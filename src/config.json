@@ -1,0 +1,91 @@
+{
+  "app": {
+    "env": "local",
+    "dummyPolicy": true
+  },
+  "api": {
+    "local": {
+      "apiRoot": "http://localhost:8080",
+      "activeVersion": "http://localhost:8080/api/getActivePolicyVersion/",
+      "policyByVersion": "http://localhost:8080/api/getPolicyByVersion/",
+      "addRule": "http://localhost:8080/api/addRule/",
+      "editRule": "http://localhost:8080/api/editRule/",
+      "deleteRule": "http://localhost:8080/api/deleteRule/",
+      "validate": "http://localhost:8080/api/validatePolicyRules/"
+    },
+    "cloud": {
+      "apiRoot": "http://api-mydeployedserver.com",
+      "activeVersion":
+        "http://api-mydeployedserver.com/api/getActivePolicyVersion/",
+      "policyByVersion":
+        "http://api-mydeployedserver.com/api/getPolicyByVersion/",
+      "addRule": "http://api-mydeployedserver.com/api/addRule/",
+      "editRule": "http://api-mydeployedserver.com/api/editRule/",
+      "deleteRule": "http://api-mydeployedserver.com/api/deleteRule/",
+      "validate": "http://api-mydeployedserver.com/api/validatePolicyRules/"
+    }
+  },
+  "environments": {
+    "prod": {
+      "title": "Production",
+      "env": "prod",
+      "tools": false,
+      "useAPI": true
+    },
+    "staging": {
+      "title": "Staging",
+      "env": "staging",
+      "tools": true,
+      "useAPI": true
+    },
+    "dev": {
+      "title": "Development",
+      "env": "dev",
+      "tools": true,
+      "useAPI": true
+    }
+  },
+  "networks": {
+    "prod": {
+      "title": "prod.mydomain.com",
+      "description": "prod.mydomain.com",
+      "network": "prod"
+    },
+    "staging": {
+      "title": "qa.mydomain.com",
+      "description": "qa.mydomain.com",
+      "network": "staging"
+    }
+  },
+  "policies": {
+    "production": {
+      "title": "Production",
+      "id": "1635",
+      "useApi": true,
+      "mock": false,
+      "description": ""
+    },
+    "qa-main": {
+      "title": "QA",
+      "id": "1636",
+      "useApi": true,
+      "mock": false,
+      "description": ""
+    },
+    "testPolicy": {
+      "title": "Team Sandbox Policy",
+      "id": "9946",
+      "useApi": true,
+      "mock": false,
+      "description": "A cloudlet used for testing the UI and API services."
+    },
+    "dummyPolicy": {
+      "title": "Mock Data",
+      "id": null,
+      "useApi": false,
+      "mock": true,
+      "description":
+        "Used for dev. Gets the dummy data to populate tables from /mock-data/*.json."
+    }
+  }
+}

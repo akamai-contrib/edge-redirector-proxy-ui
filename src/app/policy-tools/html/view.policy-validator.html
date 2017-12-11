@@ -1,0 +1,153 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div>
+    <div class="row view-title">
+        <div class="col-sm-5">
+            <h3>Policy Tools: {{ tools.pageTitle }}</h3>
+        </div>
+        <div class="col-sm-7 align-right">
+            <div class="search-wrapper">
+                <i class="si si-magnifier"></i>
+                <input type="text" ng-model="globalFilter" placeholder="Search redirects...">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="block-head-container">
+            <div class="block-nav">
+                <div class="align-right">
+                    <pagination-options></pagination-options>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+
+        <div class="block-header" data-block-header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <h4>Validate Policy: {{ tools.config.activePolicy.title }}</h4>
+                </div>
+            </div>
+            <!-- TODO: Refresh button to retrieve latest data, display last time data retrieved. -->
+        </div>
+        <div class="row" ng-if="!tools.config.activePolicy.mock">
+            <div class="col-sm-12">
+                <p>Choose a policy version and network to validate.</p>
+            </div>
+        </div>
+
+        <form novalidate ng-if="!tools.config.activePolicy.mock">
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="policy">Select a policy version</label>
+                    <select id="policy" class="form-control" ng-options="env as env.title for env in tools.config.environments | toArray | filter: {title: '!Development'}"
+                        ng-model="tools.ctrl.selectedEnvironment">
+                        <option value="" disable></option>
+                    </select>
+                </div>
+                <div class="col-sm-5">
+                    <label for="network">Select a validation network</label>
+                    <select id="network" class="form-control" ng-options="network as network.description for network in tools.config.networks"
+                        ng-model="tools.ctrl.selectedNetwork">
+                        <option value="" disable></option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn cyan" style="margin-top: 17px;" ng-click="tools.validate()">Validate</button>
+                </div>
+            </div>
+        </form>
+        <div class="row" ng-if="tools.config.activePolicy.mock">
+            <div class="col-sm-12">
+                <p>You are utilizing the Mock Data policy. Click validate to populate the table.</p>
+                <button class="btn cyan" ng-click="tools.validate('mock')">Validate</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="block-validation results" ng-if="tools.validated">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h4>Validation Results: {{ tools.config.activePolicy.title }}
+                            <span ng-if="tools.config.activePolicy.version">, Version: {{ tools.config.activePolicy.version }}</span>
+                        </h4>
+                    </div>
+                    <div class="col-sm-7 align-right">
+                        <dir-pagination-controls template-url="/app/global/html/_pagination.controls.html"></dir-pagination-controls>
+                    </div>
+                </div>
+                <!-- TODO: Refresh button to retrieve latest data, display last time data retrieved. -->
+            </div>
+
+            <table>
+                <thead>
+                    <th class="text-center" style="width: 5%">#</th>
+                    <th style="width: 35%">Source</th>
+                    <th style="width: 35%">Destination</th>
+                    <th class="text-center" style="width: 7.5%">Status</th>
+                    <th class="text-center" style="width: 7.5%">Result</th>
+                    <th class="text-center" style="width: 10%">Details</th>
+                </thead>
+                <!--
+        TODO: Currently opacity is set to .5 by default and is set to 1 when the active class is
+        added to the tbody. Would like to see opacity be 1 in a summary view, then when details
+        button is clicked, all other rows dim with the only fully visible row being the one the
+        user is drilling into. Need to consider better solution for this.
+      -->
+                <tbody dir-paginate="result in tools.ctrl.results | filter:globalFilter | itemsPerPage:paginateBy" class="table-row" data-validate-row>
+                    <tr ng-class-even="'even'">
+                        <td class="text-center">{{ result.edgeredirectorIndex + 1 }}</td>
+                        <td>{{ result.source }}</td>
+                        <td>{{ result.destination }}</td>
+                        <td class="text-center">{{ result.statusCode }}</td>
+                        <td class="text-center">{{ result.validation }}</td>
+                        <td class="text-center">
+                            <button data-validate-toggle>
+                                <i class="si si-plus"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr data-validate-tranche>
+                        <td colspan="6" class="validate-container">
+                            <table style="margin: 0; width: 100%;">
+                                <tr class="validate-details-header">
+                                    <td colspan="2">Validation Details – {{ result.source }}</td>
+                                </tr>
+                                <tr class="validate-details">
+                                    <td class="title">Configured Source</td>
+                                    <td>{{ result.source }}</td>
+                                </tr>
+                                <tr class="validate-details">
+                                    <td class="title">Configured Destination</td>
+                                    <td>{{ result.destination }}</td>
+                                </tr>
+                                <tr class="validate-details">
+                                    <td class="title">Actual Destination</td>
+                                    <td>{{ result.finalDestination }}</td>
+                                </tr>
+                                <tr ng-if="result.redirects.length" class="validate-details-header hops">
+                                    <td colspan="2">Total Hops – {{ result.redirects.length }}</td>
+                                </tr>
+                                <tr ng-repeat="hop in result.redirects" ng-if="result.redirects.length" class="validate-details">
+                                    <td class="title">Hop {{ $index + 1 }}
+                                        <span class="title pill">Status: {{ hop.statusCode }}</span>
+                                    </td>
+                                    <td>{{ hop.redirectUri }}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </div>
+    </div>
+</div>

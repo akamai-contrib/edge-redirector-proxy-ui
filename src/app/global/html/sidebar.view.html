@@ -1,0 +1,72 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div id="sidebar" class="sidebar-l">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="logo">
+          <i class="fa fa-circle-o-notch"></i>Edge Redirector</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <nav>
+          <ul>
+            <li>
+              <a data-ui-sref="dashboard" data-ui-sref-active="active">
+                <i class="si si-speedometer"></i> Dashboard
+              </a>
+            </li>
+            <li class="not-nav-item">
+              <!-- TODO: Hook policy factory/ctrl to two way bind this. -->
+              <div class="activePolicy" ng-if="">
+                <span>Active Policy</span>
+                <span>Production – 1635</span>
+                <span>
+                  <a href="">Change Active Policy</a>
+                </span>
+              </div>
+            </li>
+            <li class="sub-nav" data-ui-sref-active="open">
+              <a data-subnav-toggle>
+                <i class="si si-note"></i> Policy Editor
+              </a>
+              <ul>
+                <li>
+                  <a data-ui-sref="staging" data-ui-sref-active="active">Staging
+                    <span class="tip">v139</span>
+                  </a>
+                </li>
+                <li>
+                  <a data-ui-sref="development" data-ui-sref-active="active">Development
+                    <span class="tip">v149</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sub-nav" ng-class="{'open':$state.includes('validate')}">
+              <a data-subnav-toggle>
+                <i class="si si-calculator"></i> Policy Tools
+              </a>
+              <ul>
+                <li>
+                  <a data-ui-sref="validate" data-ui-sref-active="active">Validate Policy</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="base">
+    <div class="user">Administrator</div>
+    <div class="app-icons">
+      <i class="si si-settings"></i>
+      <i class="si si-logout"></i>
+    </div>
+  </div>
+</div>

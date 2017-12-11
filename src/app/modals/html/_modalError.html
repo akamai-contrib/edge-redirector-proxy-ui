@@ -1,0 +1,25 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div class="edgeredirector-modal-wrapper" data-error-modal>
+  <div class="edgeredirector-modal">
+    <div class="edgeredirector-modal-inner">
+      <div class="edgeredirector-modal-header error">
+        <i class="si si-ban"></i>
+        <span>{{ appError.title }} {{ appError.code }}</span>
+        <button class="float-right close" ng-click="cancel()">
+          <i class="si si-close"></i>
+        </button>
+      </div>
+      <div class="edgeredirector-modal-body">
+        <p>{{ appError.message }}.</p>
+      </div>
+      <div class="edgeredirector-modal-footer">
+        <button type="button" class="btn btn-default btn-edgeredirector" ng-click="cancel()">{{ appError.cancel }}</button>
+        <!-- <button type="button" class="btn cyan float-right" ng-click="submit()">{{ appError.action }}</button> -->
+      </div>
+    </div>
+  </div>
+</div>

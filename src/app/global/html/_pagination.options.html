@@ -1,0 +1,13 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<select
+  class="btn btn-default"
+  style="height: 38px;"
+  ng-init="paginateBy = option[0].value"
+  ng-model="paginateBy"
+  ng-options="option.value as option.name for option in options track by option.value">
+  <option value="">&nbsp;&nbsp;&nbsp;Items Per Page&nbsp;&nbsp;&nbsp;</option>
+</select>

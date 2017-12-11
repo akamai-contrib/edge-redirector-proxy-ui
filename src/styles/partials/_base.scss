@@ -1,0 +1,69 @@
+// Use Compass ('cause it rocks!)
+// @import "compass";
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: Open Sans, helvetica, sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 13px;
+$base-line-height: 1.4;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+//Colors
+$cyan: #3BC1C4;
+$sidebar-color-grey: #16242F;
+$sidebar-color-dark-grey: #0F1922;
+$sidebar-color-accent-light: #3AC0C2;
+$sidebar-color-accent-dark: #314351;
+$sidebar-color-accent-go: #4DBD73;
+$sidebar-color-accent-stop: #F14F51;
+
+//Positioning
+$sidebar-pixel-count: 240px;
+// @import "modules/all";
+$table-text-primary: #788C98;
+
+body {
+  background-color: #EDF1F2;
+  color: #495E6A;
+}
+
+.align-right {
+  text-align: right;
+}
+.float-right {
+  float: right;
+}
+
+.view-title {
+  margin: 20px -15px 10px;
+  & h3 {
+    margin: 0;
+  }
+
+}
+.search-wrapper {
+  position: relative;
+  & input {
+    width: 300px;
+    text-indent: 22px;
+    border: none;
+  }
+  & .si-magnifier {
+    position: absolute;
+    top: 9px;
+    right: 275px;
+    color: $table-text-primary;
+  }
+}

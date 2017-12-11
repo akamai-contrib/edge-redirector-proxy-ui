@@ -1,0 +1,33 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div>
+    <div class="row view-title">
+        <div class="col-sm-5">
+            <h3>Dashboard</h3>
+        </div>
+        <div class="col-sm-7 align-right">
+            <!-- <div class="search-wrapper"> -->
+            <!-- <i class="si si-magnifier"></i> -->
+            <!-- <input type="text" placeholder="Search redirects..."> -->
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h4>Policy Selection</h4>
+        <form novalidate>
+            <label for="policy" ng-if="dashboard.selectedPolicy.length == 0">Select a policy</label>
+            <!-- filter: (!config.app.dummyPolicy || '') && {title: '!Dummy Data'} -->
+            <select id="policy" class="form-control" ng-options="policy as policy.title for policy in dashboard.config.policies | toArray" ng-model="dashboard.selectedPolicy">
+              <option value="" disable></option>
+            </select>
+            <h5><small>Note: This policy will persist throughout the app, until changed.</small></h5>
+            <button class="btn cyan" style="margin-top: 10px;" ng-click="dashboard.switchActivePolicy()">Submit</button>
+        </form>
+    </div>
+</div>

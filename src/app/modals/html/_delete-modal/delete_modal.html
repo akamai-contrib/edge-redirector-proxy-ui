@@ -1,0 +1,28 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div ng-submit="submit()">
+  <div class="edgeredirector-modal-header">
+    <i class="si si-trash"></i>
+    <span>Delete Rule</span>
+    <button class="float-right close" ng-click="cancel()">
+      <i class="si si-close"></i>
+    </button>
+  </div>
+  <div class="edgeredirector-modal-body">
+    <p>{{ message }}</p>
+    <hr>
+    <div class="context">
+      <p class="title">SOURCE</p>
+      <p>{{ source }}</p>
+      <p class="title">DESTINATION</p>
+      <p>{{ destination }}</p>
+    </div>
+  </div>
+  <div class="edgeredirector-modal-footer">
+    <button type="button" class="btn btn-default btn-edgeredirector" ng-click="cancel()">{{ exitButton }}</button>
+    <button type="button" class="btn cyan float-right" ng-click="submit()">{{ confirmButton }}</button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<h4>
+  <span class="edgeredirector-pagination" ng-if="1 > pages.length">Nothing to display</span>
+  <span class="edgeredirector-pagination" ng-if="1 == pages.length">Showing all redirects</span>
+  <ul class="edgeredirector-pagination" ng-if="1 < pages.length || !autoHide">
+    <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }">
+      <a href="" class="previous" ng-click="setCurrent(pagination.current - 1)">
+        <i class="si si-arrow-left"></i>
+      </a>
+    </li>
+    <li>{{ 'Page ' + pagination.current + ' of ' + pagination.last }}</li>
+    <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }">
+      <a href="" class="next" ng-click="setCurrent(pagination.current + 1)">
+        <i class="si si-arrow-right"></i>
+      </a>
+    </li>
+  </ul>
+</h4>

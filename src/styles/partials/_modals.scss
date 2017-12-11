@@ -1,0 +1,91 @@
+// <div class="edgeredirector-modal-wrapper">
+//   <div class="edgeredirector-modal">
+//     <div class="modal-header"></div>
+//     <div class="modal-body"></div>
+//     <div class="modal-footer"></div>
+//   </div>
+// </div>
+
+.edgeredirector-modal-wrapper {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(230, 240, 255, 0.75);
+  display: flex;
+}
+
+.edgeredirector-modal {
+  z-index: 100000;
+  min-height: 200px;
+  background: #fff;
+  width: 600px;
+  margin: auto;
+  vertical-align: middle;
+  display: inline-flex;
+  border-radius: 5px;
+  box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.edgeredirector-modal-inner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.edgeredirector-modal-header {
+  width: 100%;
+  padding: 14px;
+  color: $table-text-primary;
+  background-color: #0f1922;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  > i {
+    margin-right: 10px;
+  }
+  > .close {
+    font-size: 18px;
+    text-shadow: none;
+    color: $table-text-primary;
+    opacity: 0.8;
+  }
+  &.error {
+    background-color: #f94648;
+    color: #ffffff;
+    > .close {
+      color: #ffffff;
+    }
+  }
+}
+
+.edgeredirector-modal-body {
+  padding: 50px 75px 25px;
+  width: 100%;
+  & input,
+  select {
+    margin: 0 0 15px;
+    background-color: #f4f5f7;
+    color: $table-text-primary;
+    border: none;
+  }
+  ::-webkit-input-placeholder {
+    color: #c9d3d8;
+  }
+  & .context {
+    margin-bottom: 20px;
+    & .title {
+      color: $table-text-primary;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.edgeredirector-modal-footer {
+  padding: 14px;
+  width: 100%;
+}

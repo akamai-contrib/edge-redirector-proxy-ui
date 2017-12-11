@@ -1,0 +1,2665 @@
+{
+  "location": "/cloudlets/api/v2/policies/1635/versions/141",
+  "revisionId": 259874,
+  "policyId": 1635,
+  "version": 141,
+  "description": "Update redirect for healthcare finance (Based on v140)",
+  "createdBy": "dev1@mydomain.com",
+  "createDate": 1479324745751,
+  "lastModifiedBy": "dev1@mydomain.com",
+  "lastModifiedDate": 1479327151410,
+  "activations": [
+    {
+      "apiVersion": "2.0",
+      "network": "prod",
+      "policyInfo": {
+        "policyId": 1635,
+        "name": "Edge_Redirector",
+        "version": 141,
+        "status": "active",
+        "statusDetail": "blessed",
+        "activatedBy": "dev1@mydomain.com",
+        "activationDate": 1479406482000
+      },
+      "propertyInfo": {
+        "name": "www.mydomain.com-pm",
+        "version": 306,
+        "groupId": 45866,
+        "status": "active",
+        "activatedBy": "dev4@mydomain.com",
+        "activationDate": 1479325142000
+      }
+    },
+    {
+      "apiVersion": "2.0",
+      "network": "prod",
+      "policyInfo": {
+        "policyId": 1635,
+        "name": "Edge_Redirector",
+        "version": 141,
+        "status": "active",
+        "statusDetail": "blessed",
+        "activatedBy": "dev1@mydomain.com",
+        "activationDate": 1479406501000
+      },
+      "propertyInfo": {
+        "name": "qa-www.mydomain.com_pm",
+        "version": 219,
+        "groupId": 78514,
+        "status": "deactivated",
+        "activatedBy": "dev2@mydomain.com",
+        "activationDate": 1462201477000
+      }
+    },
+    {
+      "apiVersion": "2.0",
+      "network": "staging",
+      "policyInfo": {
+        "policyId": 1635,
+        "name": "Edge_Redirector",
+        "version": 141,
+        "status": "active",
+        "statusDetail": "blessed",
+        "activatedBy": "dev1@mydomain.com",
+        "activationDate": 1479333201000
+      },
+      "propertyInfo": {
+        "name": "www.mydomain.com-pm",
+        "version": 306,
+        "groupId": 45866,
+        "status": "active",
+        "activatedBy": "dev1@mydomain.com",
+        "activationDate": 1479317119000
+      }
+    },
+    {
+      "apiVersion": "2.0",
+      "network": "staging",
+      "policyInfo": {
+        "policyId": 1635,
+        "name": "Edge_Redirector",
+        "version": 141,
+        "status": "active",
+        "statusDetail": "blessed",
+        "activatedBy": "dev1@mydomain.com",
+        "activationDate": 1479333203000
+      },
+      "propertyInfo": {
+        "name": "qa-www.mydomain.com_pm",
+        "version": 595,
+        "groupId": 78514,
+        "status": "deactivated",
+        "activatedBy": "sanpande",
+        "activationDate": 1479508103000
+      }
+    }
+  ],
+  "matchRules": [
+    {
+      "type": "erMatchRule",
+      "name": "Credit Karma distribution ID removal",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "(.*)(distribution=[\\d]+&)(external_id=CJA[\\w\\d_]+K2569276)(.+)",
+          "matchType": "regex"
+        }
+      ],
+      "akaRuleId": "2ce6232fbbfa8431",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/2ce6232fbbfa8431",
+      "statusCode": 302,
+      "redirectURL": "\\1\\3\\4"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Healthcare Finance Contact decommision",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/contact/healthcare-finance /contact/healthcare-finance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "128f3b4de1fb5fc",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/128f3b4de1fb5fc",
+      "statusCode": 301,
+      "redirectURL": "/page-not-found/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Allstate refinancing to allstate/refinancing/pq",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/auto-financing/lp/allstate/refinancing/ /auto-financing/lp/allstate/refinancing",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "b1b7f464380e8b29",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/b1b7f464380e8b29",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/lp/allstate/refinancing/pq/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Carstatus to autorefi.mydomain.com/login",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/carstatus /carstatus/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "1f7dfe9a879ce8a8",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/1f7dfe9a879ce8a8",
+      "statusCode": 301,
+      "redirectURL": "https://autorefi.mydomain.com/login",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Auto-refinancing to autorefi.mydomain.com",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/auto-financing/auto-refinancing /auto-financing/auto-refinancing/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "f004328e21df27ca",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/f004328e21df27ca",
+      "statusCode": 301,
+      "redirectURL": "https://autorefi.mydomain.com/",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Samsungpay vanity url",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/samsungpay/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "46e06c51afa692ab",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/46e06c51afa692ab",
+      "statusCode": 301,
+      "redirectURL": "/applications/mobile/samsung-pay",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Masterpass vanity url",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/masterpass/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "1e1c6f9df9cb8567",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/1e1c6f9df9cb8567",
+      "statusCode": 301,
+      "redirectURL": "/applications/masterpass",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Boston MoneyCoaching Vanity URL",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/moneycoaching/boston/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a349e875ae280778",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a349e875ae280778",
+      "statusCode": 301,
+      "redirectURL":
+        "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Austin MoneyCoaching vanity URL",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/moneycoaching/austin/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "7643048031a06c33",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/7643048031a06c33",
+      "statusCode": 301,
+      "redirectURL":
+        "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37160/48690"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Small business redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/smallbusiness /smallbusiness/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "29c2078c65bb97f2",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/29c2078c65bb97f2",
+      "statusCode": 302,
+      "redirectURL": "/credit-cards/business/",
+      "useIncomingQueryString": true,
+      "useRelativeUrl": "relative_url"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-334 /300strong/",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/300strong/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "9f90d058c2d490cb",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/9f90d058c2d490cb",
+      "statusCode": 301,
+      "redirectURL": "/bank/300strong/?external_id=360b_MM_DM_300Strong",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-334 /200strong/",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/200strong/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "de08d4a5062eb787",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/de08d4a5062eb787",
+      "statusCode": 301,
+      "redirectURL": "/bank/200strong/?external_id=360b_MM_DM_200Strong",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-334 /stronger200/",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/stronger200/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a443cbcdcd1e552c",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a443cbcdcd1e552c",
+      "statusCode": 301,
+      "redirectURL": "/bank/stronger200/?external_id=360b_MM_DM_Strong200",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-334 /strong200/",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/strong200/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "4fadce02ac0b56ea",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/4fadce02ac0b56ea",
+      "statusCode": 301,
+      "redirectURL": "/bank/strong200/?external_id=360b_MM_DM_Strong200",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-334 /strong100/",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/strong100/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d8496b9649e20654",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d8496b9649e20654",
+      "statusCode": 301,
+      "redirectURL": "/bank/strong100/?external_id=360b_MM_DM_Strong100",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-334 /growstrong/",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/growstrong/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "649549363a95b860",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/649549363a95b860",
+      "statusCode": 301,
+      "redirectURL": "/bank/growstrong/?external_id=360b_MM_DM_Strong",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Add sparkpromo",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/sparkpromo /sparkpromo/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "93ae5c2afebe1bb3",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/93ae5c2afebe1bb3",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/compare/?filter=business,excellent&external_id=promo",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Add conferences redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/conferences /conferences/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "8c62a4b3eb4bd465",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/8c62a4b3eb4bd465",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/compare/?filter=business,excellent&external_id=conf",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-322 Mortgage Home Equity Redirec",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/homeequityloans/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5b37d334d26c7158",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5b37d334d26c7158",
+      "statusCode": 301,
+      "redirectURL": "/home-equity?external_id=HE_HE_HomeEquityLoans",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "conferences",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "caseSensitive": true,
+          "matchValue": "/sparkpromo /sparkpromo/ /conferences /conferences/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "c38cdbfd6248e6aa",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/c38cdbfd6248e6aa",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/compare/?filter=business,excellent&external_id=SMBT_TDS",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/stars/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "ad4b7002ce711489",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/ad4b7002ce711489",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/mlp/dallas-stars",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "COAF Secure Upload Redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "caseSensitive": true,
+          "matchValue": "/secureupload/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "cbfa1fbdccffd4c4",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/cbfa1fbdccffd4c4",
+      "statusCode": 301,
+      "redirectURL":
+        "https://secureupload.mydomain.com/auto-finance/secureupload"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-314 360 Sept",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/sept360checkingbonus/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e816fb22508a72c0",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e816fb22508a72c0",
+      "statusCode": 301,
+      "redirectURL":
+        "/bank/sept360checkingbonus/?external_id=360C_Bonus_DM_Sept",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-305 COAF state redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/auto-financing/select-state/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "31b08090e567f729",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/31b08090e567f729",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-287 HE Mortgage Refi",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/hemortgagerefi/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d451daf37df77f27",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d451daf37df77f27",
+      "statusCode": 301,
+      "redirectURL": "/home-equity/refinance-mortgage",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-287 Consolidate",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/consolidate/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "36df9e48eeb3a1a5",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/36df9e48eeb3a1a5",
+      "statusCode": 301,
+      "redirectURL": "/home-equity/debt-consolidation",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-287 Home Improvement",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/homeimprovement/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "cb5f5129982413bf",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/cb5f5129982413bf",
+      "statusCode": 301,
+      "redirectURL": "/home-equity/home-improvement",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-268 My New Statement",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/mynewstatement/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "caf7cb20b83d34cb",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/caf7cb20b83d34cb",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/lp/my-new-statement/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-233 Money Market",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/moneymarket/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "b17587cb254c2b2c",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/b17587cb254c2b2c",
+      "statusCode": 301,
+      "redirectURL":
+        "/online-money-market-account/?external_id=360b_MM_DM_DualMarketing",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-233 360 Savings",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/360savings/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "9b85fe1b5ec3ff66",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/9b85fe1b5ec3ff66",
+      "statusCode": 301,
+      "redirectURL":
+        "/savings-accounts/online-savings-account/?external_id=360b_SAV_DM_DualMarketing",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Disclosure with query string redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "^(.*/credit-cards/)(.+)(/disclosures/)([\\?].*)$",
+          "matchType": "regex"
+        }
+      ],
+      "akaRuleId": "41e272990524bde8",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/41e272990524bde8",
+      "statusCode": 301,
+      "redirectURL": "\\1\\2/\\4#disclosures"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Disclosure Redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "^(.*/credit-cards/)(.+)(/disclosures/)",
+          "matchType": "regex"
+        }
+      ],
+      "akaRuleId": "a89edd2299a6bbb7",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a89edd2299a6bbb7",
+      "statusCode": 301,
+      "redirectURL": "\\1\\2/#disclosures"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-224 360 Checking Bonus",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/360checkingbonus/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e4f9abf9a5da6fde",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e4f9abf9a5da6fde",
+      "statusCode": 301,
+      "redirectURL": "/bank/360checkingbonus/?external_id=360C_Bonus_DM_Aug",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-219 Home Loans Rate Calculator",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/ratecalculator/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d5e9b5a250c52901",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d5e9b5a250c52901",
+      "statusCode": 301,
+      "redirectURL":
+        "/home-equity/calculator/rates?external_id=HE_HE_PRINT_1_Calculator",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-213 Brand Big Payoff",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/thebigpayoff/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "ca514ab388239ff6",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/ca514ab388239ff6",
+      "statusCode": 301,
+      "redirectURL": "https://www.mydomainbigpayoff.com/"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-211 Bank Money Coaching",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/moneycoaching/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5928d516a901b730",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5928d516a901b730",
+      "statusCode": 301,
+      "redirectURL":
+        "https://cafeevents.mydomain-alt.com/cafe-appts/#/appointment/37008/48336"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Temporary redirect for device type js for existing app to work",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/assets/enterprise/js/c1TechVars.js",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "3b3a152cbf25477d",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/3b3a152cbf25477d",
+      "statusCode": 301,
+      "redirectURL": "/assets/enterprise/deviceType/c1SiteVars.js",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-216 Partnerships Redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/credit-cards/partnerships/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "80840ba3a36aee2b",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/80840ba3a36aee2b",
+      "statusCode": 302,
+      "redirectURL": "/credit-cards/partnerships/buypower-card/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-331 Get More redirect to bank",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/getmore/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "cfc00985393091ec",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/cfc00985393091ec",
+      "statusCode": 301,
+      "redirectURL": "/bank/getmore/?external_id=360b_MM_DM_Control",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-331 Earn More bank redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/earnmore/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "4cd531191bf30f15",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/4cd531191bf30f15",
+      "statusCode": 301,
+      "redirectURL": "/bank/getmore/?external_id=360b_mm_dm_July_Lt",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-198 360 Money Market",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/360moneymarket/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "c0eea03a8a2db660",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/c0eea03a8a2db660",
+      "statusCode": 301,
+      "redirectURL":
+        "/online-money-market-account/?external_id=360b_mm_print_Q3Q4",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-181 /bettertogether",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/bettertogether/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "b125d158d26f5bf5",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/b125d158d26f5bf5",
+      "statusCode": 301,
+      "redirectURL": "/bank/bettertogether/?external_id=Bundle_July",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-158 /alexa/terms",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/alexa/terms/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d970fc9c158ecec5",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d970fc9c158ecec5",
+      "statusCode": 301,
+      "redirectURL": "/applications/alexa/terms/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-158 /alexa/thankyou",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/alexa/thankyou/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e336d0290b44eed0",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e336d0290b44eed0",
+      "statusCode": 301,
+      "redirectURL": "/applications/alexa/thankyou/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-158 /alexa/thank-you",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/alexa/thank-you/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "14fc0673580a05a3",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/14fc0673580a05a3",
+      "statusCode": 301,
+      "redirectURL": "/applications/alexa/thank-you/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-158 /alexa",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/alexa/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "1382496c2028e654",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/1382496c2028e654",
+      "statusCode": 301,
+      "redirectURL": "/applications/alexa/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-158 /online-banking/mobile/apple-pay",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/online-banking/mobile/apple-pay/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a23e90f4c2c5336a",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a23e90f4c2c5336a",
+      "statusCode": 301,
+      "redirectURL": "/applications/mobile/apple-pay/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-158 /online-banking/mobile/wallet",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/online-banking/mobile/wallet/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "c5fe4f56a1eff35a",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/c5fe4f56a1eff35a",
+      "statusCode": 301,
+      "redirectURL": "/applications/mobile/wallet/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-162: COAF redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/auto-financing/auto-loans/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "8896b0b6d0ca037c",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/8896b0b6d0ca037c",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-141 - save more",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/savemore /savemore/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "6572695dd4c7b41e",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/6572695dd4c7b41e",
+      "statusCode": 301,
+      "redirectURL":
+        "https://www.mydomain.com/bank/expectmore/?external_id=360b_MM_EMAIL_MAYOLDDM"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1412895 Refi Cafe redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/autocafe/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "7d6318a77dfb828d",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/7d6318a77dfb828d",
+      "statusCode": 301,
+      "redirectURL":
+        "https://ane.mydomain.com/landing?PFFSRCID=SR1BLC%2A%2A%2AAUT%2A%2A%2A%2ABU0001%2A%2A%2A&external_id=COAF_AN_BNK_BNK",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1412895 Refi Email 1 redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/autostatement1/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a5b49c8e1f9dd830",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a5b49c8e1f9dd830",
+      "statusCode": 301,
+      "redirectURL":
+        "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1002&external_id=COAF_AN_ISL_EXT",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1412895 Auto Statement redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/autostatement/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "2027345b4cda842",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/2027345b4cda842",
+      "statusCode": 301,
+      "redirectURL":
+        "https://ane.mydomain.com/landing?PFFSRCID=S-IL-12345678901-SOL-1001&external_id=COAF_AN_ISL_EXT",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1412895 Automail1 redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/automail1/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "9eca0cb5626cffdb",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/9eca0cb5626cffdb",
+      "statusCode": 301,
+      "redirectURL":
+        "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1002&external_id=COAF_AN_DM_FDM",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1412895 Automail redirect",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/automail/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "60ac848d26321a2d",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/60ac848d26321a2d",
+      "statusCode": 301,
+      "redirectURL":
+        "https://ane.mydomain.com/landing?PFFSRCID=S-DM-12345678901-SOL-1001&external_id=COAF_AN_DM_FDM",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-136 STM BANK",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/siezethemay/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "4d99474fbce21f0f",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/4d99474fbce21f0f",
+      "statusCode": 301,
+      "redirectURL": "/seizethemay",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-134 360 Money Market",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/360-money-market/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "bc500f9e0506c152",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/bc500f9e0506c152",
+      "statusCode": 301,
+      "redirectURL": "/bank/expectmore?external_id=360B_MM_SEM",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-73 Uber Takedown Redirects",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/uber/ /uber-free/ /uber-quicksilver/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "ebbdf0c05f3e8f2a",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/ebbdf0c05f3e8f2a",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/cash-back/uber/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "CAPONE-454 [BW3] CONS BANK: MMA Redirect 04/18/2016",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/getexcited/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "bb16a4728fd28488",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/bb16a4728fd28488",
+      "statusCode": 301,
+      "redirectURL": "/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-108 - Bank OLB-V Demo Redirect",
+      "matches": [
+        {
+          "matchOperator": "contains",
+          "matchValue": "/onlinebanking/demos/test_drive/*",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "10a2131bc1400ada",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/10a2131bc1400ada",
+      "statusCode": 301,
+      "redirectURL": "/online-banking/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "CAPONE 191 CONS BANK CAPONE 360 Tiered Cash campaign pause",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/bank/savings-bonus/ /yearofmoney/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "685a77105996e9c2",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/685a77105996e9c2",
+      "statusCode": 301,
+      "redirectURL": "/bank/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1384316 - Create Refinance Vanity URL - WWW CO",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/autorefi/ /autorefi",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a5a173dd86bbcb18",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a5a173dd86bbcb18",
+      "statusCode": 301,
+      "redirectURL": "https://autorefi.mydomain.com/",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "B-1350162 - Expect More - Bank LOB",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/expectmore/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "9eedbc1996427d3a",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/9eedbc1996427d3a",
+      "statusCode": 301,
+      "redirectURL": "/bank/lp/360MoneyMarket/?external_id=360b_MM_DM_MAYEXITS",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Akamai T Fine - AKAM-18",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/creditwise/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "62df2de8acea972",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/62df2de8acea972",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/benefits/creditwise/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-20: Redirect /echo to /alexa on .com",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/echo/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "466d6941b13934dc",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/466d6941b13934dc",
+      "statusCode": 301,
+      "redirectURL": "/applications/alexa/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "360 Help Center",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/bankinghelp/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "3083bfa72bf5c7fc",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/3083bfa72bf5c7fc",
+      "statusCode": 301,
+      "redirectURL": "https://helpcenter.mydomain-alt.com/"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/auto-financing/auto-refinancing/details/ /auto-financing/auto-refinancing/faq/ /auto-financing/auto-refinancing/disclosures/ /auto-financing/auto-refinancing/details /auto-financing/auto-refinancing/faq /auto-financing/auto-refinancing/disclosures",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "945492c4f8080e6c",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/945492c4f8080e6c",
+      "statusCode": 301,
+      "redirectURL": "https://autorefi.mydomain.com/",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/chooseit/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "f9b02de8ac2fb528",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/f9b02de8ac2fb528",
+      "statusCode": 301,
+      "redirectURL":
+        "https://servicing.mydomain.com/c1/Login.aspx?redirect=PURCHASELEVELFINANCING",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/contact/home-equity/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "56ab859ee02ff215",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/56ab859ee02ff215",
+      "statusCode": 301,
+      "redirectURL": "/home-equity/contact",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/contact/home-loans/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "880a3728f2f796d9",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/880a3728f2f796d9",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/contact",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/vacationownership/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "97ae2510ba3c37fe",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/97ae2510ba3c37fe",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/vacation-ownership/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/reit/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d3f839382e907b21",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d3f839382e907b21",
+      "statusCode": 301,
+      "redirectURL":
+        "/commercial/industry-expertise/real-estate-investment-trust/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/maritime/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "b6240b37ddda5aa6",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/b6240b37ddda5aa6",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/maritime/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/applepay/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "833e79497dada6fc",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/833e79497dada6fc",
+      "statusCode": 301,
+      "redirectURL": "/applications/mobile/apple-pay/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "start": 1420646400,
+      "end": 1754936940,
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/car-financing/ /autonavigator/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e3b5ffeb61d37b17",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e3b5ffeb61d37b17",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/auto-navigator/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 2",
+      "start": 1420646400,
+      "end": 1736180820,
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/blankcheck/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "3cc1df3a243a2753",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/3cc1df3a243a2753",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 2",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/credit-cards/lp/balance-transfer/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "88d65737e0089a95",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/88d65737e0089a95",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/balance-transfer/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/error/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "f1543d137bad0a91",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/f1543d137bad0a91",
+      "statusCode": 301,
+      "redirectURL": "/page-not-found/",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/dealerportal/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "294f6f000c98eb9e",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/294f6f000c98eb9e",
+      "statusCode": 301,
+      "redirectURL": "https://lo-web-fe.mydomain.com/DealerPortal",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 2",
+      "matches": [
+        {
+          "matchOperator": "contains",
+          "matchValue": ".*\\.png\\/$",
+          "matchType": "regex"
+        }
+      ],
+      "akaRuleId": "2aaf05a649e2085f",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/2aaf05a649e2085f",
+      "statusCode": 301,
+      "redirectURL": "https://www.mydomain.com/page-not-found/"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "contains",
+          "matchValue": ".*\\.ico\\/$",
+          "matchType": "regex"
+        }
+      ],
+      "akaRuleId": "6d7b555595089667",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/6d7b555595089667",
+      "statusCode": 301,
+      "redirectURL": "https://www.mydomain.com/page-not-found/"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 11",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/mysparkselect/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5151865b3403f09c",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5151865b3403f09c",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/spark-cash-select/?external_id=SMB_CR1_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 10",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/findsparkselect/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5cfa57afa06aa7f4",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5cfa57afa06aa7f4",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/cash-back/?external_id=SMB_CR2_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 9",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/mycashselect/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5db290eedda12403",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5db290eedda12403",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/spark-cash-select/?external_id=SMB_CR3_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 8",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/findcashselect/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d345d88edbeb8e2e",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d345d88edbeb8e2e",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/cash-back/?external_id=SMB_CR4_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 7",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/mycash/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e698cacf2a91652f",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e698cacf2a91652f",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/spark-cash/?external_id=SMB_CR5_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 6",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/findcash/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a92e24315c0290f7",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a92e24315c0290f7",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/cash-back/?external_id=SMB_CR6_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 5",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/mysparkcash/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "402e7cb8c0360400",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/402e7cb8c0360400",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/spark-cash/?external_id=SMB_CR7_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 4",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/findmyspark/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "54a469b44e46203d",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/54a469b44e46203d",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/cash-back/?external_id=SMB_CR8_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 3",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/findaspark/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "6d1bb4a3b93978ba",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/6d1bb4a3b93978ba",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/business/cash-back/?external_id=SMB_CR9_DTW",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 2",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/small-business-bank/savings-cds/money-market-account/ /small-business-bank/savings-cds/money-market-account/rates/ /small-business-bank/savings-cds/money-market-account/faq/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "8c329fb9e4460342",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/8c329fb9e4460342",
+      "statusCode": 301,
+      "redirectURL": "/small-business-bank/savings-cds/savings-account/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/rewardsupgrade/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a1f2e4767f9956cf",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a1f2e4767f9956cf",
+      "statusCode": 301,
+      "redirectURL":
+        "https://servicing.mydomain.com/c1/login.aspx?redirect=MODIFYYOURFEATURES"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 3",
+      "start": 1420646400,
+      "end": 1735748640,
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/auto-financing/auto-loans/details/ /auto-financing/auto-loans/faq/ /auto-financing/auto-loans/disclosures/ /auto-financing/used-car-loans/details/ /auto-financing/used-car-loans/faq/ /auto-financing/used-car-loans/disclosures/ /auto-financing/help-center/ /auto-financing/help-center/auto-buying-guide/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5c0fa97c627c5489",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5c0fa97c627c5489",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/prepaid-cards/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "174379426e92b73a",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/174379426e92b73a",
+      "statusCode": 301,
+      "redirectURL": "/page-not-found/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/online-banking/secure-messaging/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "ce20b2c92fc9112",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/ce20b2c92fc9112",
+      "statusCode": 301,
+      "redirectURL": "/sign-in/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 3",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/commercial/chip-cards/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "58c001152e3d3fb9",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/58c001152e3d3fb9",
+      "statusCode": 301,
+      "redirectURL": "/commercial/treasury-management/commercial-cards/emv/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 2",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/government-contracting/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "b9d23b91e531b79d",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/b9d23b91e531b79d",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/government-contracting/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/autoenroll/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "1e42818a42a3e27a",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/1e42818a42a3e27a",
+      "statusCode": 301,
+      "redirectURL":
+        "https://secure.mydomain-alt.com/myaccount/banking/autoLoanEnrollmentMain?External_ID=COAF_LS_SNAIL_0001"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/GovCon/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "ea899c3dec19ad9b",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/ea899c3dec19ad9b",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/government-contracting/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/corporatecard/ /commercial/treasury-management/commercial-cards/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "ae4e75ae4ebd4718",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/ae4e75ae4ebd4718",
+      "statusCode": 301,
+      "redirectURL": "/commercial/corporate-cards/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/sponsorfinance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "bcec8e21f3d0eef1",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/bcec8e21f3d0eef1",
+      "statusCode": 301,
+      "redirectURL": "/commercial/lending/sponsor-finance/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/healthcaresponsorfinance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "331b9c0f2213ac74",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/331b9c0f2213ac74",
+      "statusCode": 301,
+      "redirectURL": "/industry-expertise/healthcare/sponsor-finance/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/securityfinance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "d139934f659f9314",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/d139934f659f9314",
+      "statusCode": 301,
+      "redirectURL": "/industry-expertise/security/sponsor-finance/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/technologyfinance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "4764242739575816",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/4764242739575816",
+      "statusCode": 301,
+      "redirectURL": "/industry-expertise/technology/sponsor-finance/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/plasma/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "700077ac50a43084",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/700077ac50a43084",
+      "statusCode": 301,
+      "redirectURL": "https://plasma.mydomain.com",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/teamsterschipcard/ /unionpluschipcard/ /gmrewardscards/chip-card/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "3f5e74cae9cf3ec1",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/3f5e74cae9cf3ec1",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/partnerships/lp/chip-cards/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/quailvalley/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "1cde7b4045863449",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/1cde7b4045863449",
+      "statusCode": 301,
+      "redirectURL":
+        "/bank/lp/grand-opening/?tracking_id=default_default_bank_ntarrant",
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/commercial/lending/asset-based-financing/ /commercial/lending/asset-based-financing/team/ /commercial/lending/assetbackedfinance/ /assetbackedfinance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "541d693cbfa28649",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/541d693cbfa28649",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/financial-institutions/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/dealernavigator/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a0bd5d9a5a3d296",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a0bd5d9a5a3d296",
+      "statusCode": 301,
+      "redirectURL": "https://lo-web-fe.mydomain.com/DealerPortal/#/u/login",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/auto/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "77344865213c5799",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/77344865213c5799",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/home-loans/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "f9ee0b372758a267",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/f9ee0b372758a267",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/mortgage",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/home-loans/rates/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "54154c3bf9460a5e",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/54154c3bf9460a5e",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/mortgage/rates",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/home-loans/mortgage-calculators/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "3f48d4fa5328017",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/3f48d4fa5328017",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/mortgage/calculator",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/home-loans/resources/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "6b7c80431d16e1a7",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/6b7c80431d16e1a7",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/mortgage/what-to-expect",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/mobileatm/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "425a90a7af395a93",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/425a90a7af395a93",
+      "statusCode": 301,
+      "redirectURL": "/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/dealerservices/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e91e2e9cc14bb6d6",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e91e2e9cc14bb6d6",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/dealer-services/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/securedcard/faqs/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "e591f5998685fdbb",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/e591f5998685fdbb",
+      "statusCode": 301,
+      "redirectURL":
+        "/credit-cards/secured-mastercard/?external_id=www_SCVU#faq-section",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/industry-expertise/technology/sponsor-finance/ /technology/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "bbfb81f26ff47761",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/bbfb81f26ff47761",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/technology/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/industry-expertise/security/sponsor-finance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "3984b62352984dbf",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/3984b62352984dbf",
+      "statusCode": 301,
+      "redirectURL": "/commercial/industry-expertise/security/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/jingleball/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "754880b2e44f45d9",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/754880b2e44f45d9",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/benefits/jingleball/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/businesscredit/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "bc755336349f88ce",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/bc755336349f88ce",
+      "statusCode": 301,
+      "redirectURL": "/commercial/lending/business-credit/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/commercial/corporate-cards/coming-soon/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a745ca39660a9f72",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a745ca39660a9f72",
+      "statusCode": 301,
+      "redirectURL": "/commercial/corporate-cards/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/auto-financing/auto-navigator/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5711a9158b410a5f",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5711a9158b410a5f",
+      "statusCode": 301,
+      "redirectURL": "/auto-financing/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/checking-accounts/checking-account/ /checking-accounts/checking-account/disclosures/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "c19640e2fe9813cb",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/c19640e2fe9813cb",
+      "statusCode": 301,
+      "redirectURL": "/checking-accounts/essential-checking-account/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/redirect.php",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "9864e72a2fe32a08",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/9864e72a2fe32a08",
+      "statusCode": 301,
+      "redirectURL": "/redirect/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/credit-cards/classic-platinum/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "f0d9705d922339d9",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/f0d9705d922339d9",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/compare/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/tip/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "5d2e979bee217c43",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/5d2e979bee217c43",
+      "statusCode": 301,
+      "redirectURL":
+        "/commercial/treasury-management/treasury-integration-program/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/healthcare/ /healthcarefinance/ /commercial/industry-expertise/healthcare/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "9c07d7c99ae1c786",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/9c07d7c99ae1c786",
+      "statusCode": 301,
+      "redirectURL": "/commercial/healthcare/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/credit-cards/credit-builder-program/disclosures/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "f67f512aefbf6216",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/f67f512aefbf6216",
+      "statusCode": 301,
+      "redirectURL": "/credit-cards/credit-builder-program/#disclosures",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/industry-expertise/healthcare/sponsor-finance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "64356fcd5ae8ad15",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/64356fcd5ae8ad15",
+      "statusCode": 301,
+      "redirectURL":
+        "/commercial/healthcare/financing-solutions/corporate-finance/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "contains",
+          "matchValue": "/digital/*",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "7f44ad7200781a88",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/7f44ad7200781a88",
+      "statusCode": 301,
+      "redirectURL": "/standards/digital/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/auto-financing/lp/auto-financing-pict/ /auto-financing/lp/refi-011/ /auto-financing/auto-refinancing/before-applying/ /auto-financing/lp/auto-financing-pict /auto-financing/lp/refi-011 /auto-financing/auto-refinancing/before-applying",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "6c473c431dc2b0aa",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/6c473c431dc2b0aa",
+      "statusCode": 301,
+      "redirectURL": "https://autorefi.mydomain.com/",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "start": 1451624340,
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/checkingbonus/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "c3fc4c2e2d9deea0",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/c3fc4c2e2d9deea0",
+      "statusCode": 301,
+      "redirectURL": "/bank/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "Justice Decommision",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/justice/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "8b2af14e971823ab",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/8b2af14e971823ab",
+      "statusCode": 301,
+      "redirectURL": "/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 4",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/direct/contact-me/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "6b53c4733e5d6afb",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/6b53c4733e5d6afb",
+      "statusCode": 301,
+      "redirectURL": "https://mortgages.mydomain.com/direct/contact-me",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/direct/mortgage-prequalifications/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "2a9441335c4ac722",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/2a9441335c4ac722",
+      "statusCode": 301,
+      "redirectURL":
+        "https://mortgages.mydomain.com/direct/mortgage-prequalifications",
+      "useIncomingQueryString": true
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 3",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue":
+            "/home-loans/direct/calculators/home-affordability/thank-you/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "17e3d3b7d8ea61a0",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/17e3d3b7d8ea61a0",
+      "statusCode": 301,
+      "redirectURL":
+        "/home-loans/direct/calculators/home-affordability/thank-you",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 1",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/home-loans/direct/calculators/mortgage-payment/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "a321382b3e7ee7ad",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/a321382b3e7ee7ad",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/direct/calculators/mortgage-payment",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "rule 2",
+      "matches": [
+        {
+          "matchOperator": "equals",
+          "matchValue": "/home-loans/direct/calculators/refinance/",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "afba8b36fb49cd0c",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/afba8b36fb49cd0c",
+      "statusCode": 301,
+      "redirectURL": "/home-loans/direct/calculators/refinance",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    },
+    {
+      "type": "erMatchRule",
+      "name": "AKAM-123 OLBR Demo take down",
+      "matches": [
+        {
+          "matchOperator": "contains",
+          "matchValue":
+            "/online-banking/mobile/app/features/ /online-banking/mobile/faq/ /online-banking/mobile/features/ /online-banking/mobile/website/360/ /online-banking/mobile/website/bank/ /online-banking/mobile/website/credit-cards/ /online-banking/mobile/website/features/ /online-banking/mobile/android/360/ /online-banking/mobile/android/bank/ /online-banking/mobile/ipad/360/ /online-banking/mobile/ipad/bank/ /online-banking/mobile/app/bank/ /online-banking/mobile/app/credit-cards/ /online-banking/faq/ /online-banking/microsoft-money/ /online-banking/pfm-year-end-file/ /online-banking/quicken-instructions/ /online-banking/transfer-funds/*",
+          "matchType": "path"
+        }
+      ],
+      "akaRuleId": "98cf9d6c63d575d1",
+      "location":
+        "/cloudlets/api/v2/policies/1635/versions/141/rules/98cf9d6c63d575d1",
+      "statusCode": 301,
+      "redirectURL": "/online-banking/mobile/",
+      "useIncomingQueryString": true,
+      "useIncomingSchemeAndHost": true,
+      "useRelativeUrl": "copy_scheme_hostname"
+    }
+  ],
+  "matchRuleFormat": "1.0",
+  "rulesLocked": true
+}

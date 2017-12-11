@@ -1,0 +1,15 @@
+<!-- 
+   SPDX-Copyright: Copyright (c) Capital One Services, LLC
+   SPDX-License-Identifier: MIT
+   Copyright 2017 Capital One Services, LLC
+-->
+<div class="edgeredirector-modal-wrapper" data-edgeredirector-modals ng-show="subview" ng-switch="subview">
+  <div class="edgeredirector-modal">
+    <div class="edgeredirector-modal-inner">
+      <edgeredirector-add-modal ng-switch-when="add"></edgeredirector-add-modal>
+      <edgeredirector-edit-modal ng-switch-when="edit" environment="envSettings" edgeredirector-data="edgeredirectorData"></edgeredirector-edit-modal>
+      <edgeredirector-delete-modal ng-switch-when="delete"></edgeredirector-delete-modal>
+      <edgeredirector-promote-modal ng-switch-when="prompt"></edgeredirector-promote-modal>
+    </div>
+  </div>
+</div>
